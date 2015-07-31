@@ -45,26 +45,26 @@ var fs          = require("fs"),
     };
 
 function addCodeMirrorModes(config) {
-    var root = path.join(__dirname, "brackets-src", "src", "thirdparty", "CodeMirror2", "mode"),
+    var root = path.join(__dirname, "brackets-src", "src", "thirdparty", "CodeMirror", "mode"),
         dirs = fs.readdirSync(root),
         include = config.requirejs.main.options.include;
 
     dirs.forEach(function (file) {
         var stat = fs.statSync(root + "/" + file);
         if (stat.isDirectory()) {
-            include.push("thirdparty/CodeMirror2/mode/" + file + "/" + file);
+            include.push("thirdparty/CodeMirror/mode/" + file + "/" + file);
         }
     });
 }
 
 //function addCodeMirrorFold(config) {
-//    var root = path.join(__dirname, "brackets-src", "src", "thirdparty", "CodeMirror2", "addon", "fold"),
+//    var root = path.join(__dirname, "brackets-src", "src", "thirdparty", "CodeMirror", "addon", "fold"),
 //        dirs = fs.readdirSync(root),
 //        include = config.requirejs.main.options.include;
 //
 //    dirs.forEach(function (file) {
 //        if (path.extname(file) === ".js") {
-//            include.push("thirdparty/CodeMirror2/addon/fold/" + file);
+//            include.push("thirdparty/CodeMirror/addon/fold/" + file);
 //        }
 //    });
 //}
@@ -275,8 +275,8 @@ module.exports = function (grunt) {
                             "extensions/default/*/**/*.{css,less,json,svg,png}",
                             "!extensions/default/*/unittest-files/**",
                             "extensions/dev/*",
-                            "thirdparty/CodeMirror2/lib/{,*/}*.css",
-                            "thirdparty/CodeMirror2/addon/fold/**",
+                            "thirdparty/CodeMirror/lib/{,*/}*.css",
+                            "thirdparty/CodeMirror/addon/fold/**",
                             "thirdparty/i18n/*.js",
                             "thirdparty/text/*.js"
                         ]
@@ -291,6 +291,7 @@ module.exports = function (grunt) {
                             "LiveDevelopment/MultiBrowserImpl/transports/node/**",
                             "LiveDevelopment/MultiBrowserImpl/launchers/node/**",
                             "extensibility/node/**",
+                            "search/node/**",
                             "!extensibility/node/ExtensionManagerDomain.js"
                         ] //,
 //                        rename: function(dest, src) {
