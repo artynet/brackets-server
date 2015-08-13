@@ -17,7 +17,9 @@ commander
     .parse(process.argv);
 
 var app = brackets(commander.port, {
-    supportDir: commander.suppDir || path.join(homeDir, ".brackets-srv"),
+    // supportDir: commander.suppDir || path.join(homeDir, ".brackets-srv"),
+    supportDir: commander.suppDir || path.join(__dirname, "..", "support"),
+    // supportDir: commander.suppDir || path.join(process.cwd(), "support"),
     projectsDir: commander.projDir || path.join(homeDir, "Projects"),
     allowUserDomains: commander.userDomains
 });
