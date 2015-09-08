@@ -21,7 +21,7 @@
         "commander": "^2.3.0",
         "open": "^0.0.5",
         "socket.io": "1.1.0",
-        "glob": "^4.0.6"
+        "glob": "^4.0.6",
         "semver": "*",
         "request": "*",
         "fs-extra": "*",
