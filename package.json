@@ -1,7 +1,7 @@
 {
     "name": "arduinostudio",
     "description": "ArduinoStudio Server is a server for providing hosted version of the Arduino.org IDE.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "Boyan Rabchev <boyan@rabchev.com>",
     "contributors": [
         { "name": "Boyan Rabchev", "email": "boyan@rabchev.com" }
@@ -22,6 +22,11 @@
         "open": "^0.0.5",
         "socket.io": "1.1.0",
         "glob": "^4.0.6"
+        "semver": "*",
+        "request": "*",
+        "fs-extra": "*",
+        "temp": "*",
+        "decompress-zip": "*"
     },
     "devDependencies": {
         "mocha": "*",
